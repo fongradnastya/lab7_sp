@@ -28,6 +28,7 @@ void parseArguments(int argc, char* argv[], char** logFile, int* timeout)
     int opt;
     // Опции для getopt
     const char* optstring = "l:t:d:h";
+    int cnt = 0;
     // Парсим аргументы с помощью getopt
     while ((opt = getopt(argc, argv, optstring)) != -1)
     {
@@ -55,6 +56,12 @@ void parseArguments(int argc, char* argv[], char** logFile, int* timeout)
                         "Using: %s [-l logFile] [-t timeout]\n", argv[0]);
                 exit(1);
         }
+        cnt += 1;
+    }
+    if(cnt == 0)
+    {
+        showHelp("");
+        exit(1);
     }
 }
 

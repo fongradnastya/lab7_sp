@@ -3,6 +3,5 @@
 Для запуска программы через терминал линукс последовательно введите команды:
 
 ```bash
-sudo ./client -l client.log -t 2
-sudo ./server -l server.log -t 2
+sudo ./server -l server.log -t 200
 ```
